@@ -30,11 +30,11 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.6",
-    "autoprefixer": "latest",
+    "autoprefixer": "^10.4.20",
     "eslint": "latest",
     "eslint-config-next": "15.1.1",
-    "postcss": "latest",
+    "postcss": "^8.5.2",
     "sass": "^1.69.5",
-    "tailwindcss": "latest"
+    "tailwindcss": "^4.0.6"
   }
 }
