@@ -1,0 +1,43 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "next.config.js",
+        "use": "@vercel/next"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/api/:path*",
+        "destination": "/api/:path*"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/old-route",
+        "destination": "/new-route",
+        "permanent": true
+      }
+    ],
+    "env": {
+      "NEXT_PUBLIC_API_URL": "https://your-api.com",
+      "NEXT_PUBLIC_ENV": "production"
+    },
+    "functions": {
+      "api/*.js": {
+        "memory": 512,
+        "maxDuration": 10
+      }
+    },
+    "github": {
+      "enabled": true,
+      "autoJobCancelation": true
+    }
+  }
+  
